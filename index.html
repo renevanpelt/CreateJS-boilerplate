@@ -1,8 +1,20 @@
 <html>
 <head>
+   <style>
+        #cnvs {
+	  background-color: #808080;
 
-   <script src="http://code.createjs.com/easeljs-0.8.0.min.js"></script> 
+    	}
+
+   </style>
+
    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- <script src="http://code.createjs.com/easeljs-0.8.0.min.js"></script>--> 
+   <script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script> 
+   <script src="controls.js"></script>
+   <script src="player.js"></script>
+   <script src="vector.js"></script>
+   <script src="game.js"></script>
 
 </head>
 
@@ -14,9 +26,11 @@
 
 </body>
 <script>
-  var stage;
-
+  var stage; // Defined in game.js#init() 
+  var player;
 
   init();
+
+
 </script>
 </html>
