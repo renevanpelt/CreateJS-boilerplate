@@ -1,4 +1,4 @@
-var GRAVITY = .81;
+var GRAVITY = 1.81;
 
 createjs.Ticker.addEventListener('tick',tick);
 

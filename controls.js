@@ -16,6 +16,9 @@ $(window).keydown( function(event) {
 	//console.log(keyCode);
 	
 	switch(keyCode){
+		case  32:
+			player.shoot();
+			break;
 		case  38:
 		  keyObject.up = true;
 		  break;
