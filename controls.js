@@ -33,17 +33,17 @@ $(window).keydown( function(event) {
 
 
 $(window).keyup( function(event) {
-	
+
 	keyCode = event.which || event.keycode;
-	
+
 	for(i=0;i<keyObject.list.length;i++){
-		
+
 		if(keyObject.list[i] == keyCode){
-		    keyObject.list.splice(i,1);	
+		    keyObject.list.splice(i,1);
 		}
 	}
 	//console.log(keyCode);
-	
+
 	switch(keyCode){
 		case  38:
 		  keyObject.up = false;
