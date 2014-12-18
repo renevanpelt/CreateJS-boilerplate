@@ -20,7 +20,7 @@ Player = function(width, height, mass) {
 
 Player.prototype.shoot = function(){
 
-  this.bullets.push(new Bullet(new Vector2D(this.position.x,this.position.y),new Vector2D(0,0)));
+  this.bullets.push(new Bullet(new Vector2D(this.position.x,this.position.y),new Vector2D(18,-8)));
 
 
 

@@ -5,10 +5,10 @@
 var Bullet = function(position,speed){
     this.live = true;
     this.easelShape = new createjs.Shape();
-    this.acceleration = new Vector2D(0,0);
+    this.acceleration = new Vector2D(0,0.5);
     this.position = position; // Vector2D object
     this.speed= speed; // Vector2D object
-    this.easelShape.graphics.beginFill("#BCBCBC").drawCircle(this.position.x,this.position.y,5);
+    this.easelShape.graphics.beginFill("#BCBCBC").drawCircle(0,0,5);
     stage.addChild(this.easelShape);
     console.log(this.position);
     console.log(player.position);
