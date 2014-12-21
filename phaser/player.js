@@ -45,7 +45,7 @@ Player.prototype = Object.create(Phaser.Sprite.prototype);
 
 //Class Constants
 Player.horizontalspeed = 400;
-Player.jumpspeed = 500;
+Player.jumpspeed = 550;
 Player.bouncyness = 0; //between 0 - 1
 Player.jumpCooldown = 750;
 Player.shootCooldown = 300;

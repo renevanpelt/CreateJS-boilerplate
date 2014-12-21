@@ -13,6 +13,8 @@ function preload() {
 
     game.load.tilemap('testlevel', 'levels/solidtest.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', 'assets/tiles.png');
+
+    game.load.image('background', 'assets/space.jpg');
 }
 
 
@@ -35,6 +37,9 @@ function create() {
 
 
     game.physics.arcade.gravity.y = 1500;
+
+    bg = game.add.tileSprite(0, 0, game.width, game.height, 'background');
+    bg.fixedToCamera = true; //Maintain position regardless of camera scrolling.
 
     
 
@@ -63,13 +68,15 @@ function create() {
     //Camera should follow player.
     game.camera.follow(player, Phaser.Camera.FOLLOW_PLATFORMER);
 
-    game.camera.setBoundsToWorld();
 }
 
 function update() {
 
     //Player should collide with the level
     game.physics.arcade.collide(player, layer);
+
+    //Paralax scrolling of background
+    bg.tilePosition.set(this.game.camera.x * -0.1, this.game.camera.y * -0.1);
 }
 
 function render () {
