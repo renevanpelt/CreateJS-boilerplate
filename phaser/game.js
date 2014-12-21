@@ -48,6 +48,7 @@ function create() {
     
     //  Create our layer
     layer = map.createLayer(0);
+    layer.renderSettings.enableScrollDelta = false;//Fix WebKit graphical artefact.
 
     //  Resize the world
     layer.resizeWorld();
@@ -61,6 +62,8 @@ function create() {
 
     //Camera should follow player.
     game.camera.follow(player, Phaser.Camera.FOLLOW_PLATFORMER);
+
+    game.camera.setBoundsToWorld();
 }
 
 function update() {
